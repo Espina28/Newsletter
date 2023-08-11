@@ -11,18 +11,21 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
-<script src="./Javascript files/index.js" defer></script>
+  <script src="./js/index.js" defer></script>
 </head>
 <body>
-
-
-  <div class="container">
-      <main>
-        <div>
+  
+  
+  <main>
+    <div class="container">
+      <div class="illustration-signup">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="svg sign-up image"/>
+      </div>
+        <header class="title">
         <h1>Stay Updated!</h1>
           <p>Join 60,000+ product managers receivingp monthly <br>
           updates on:</p>
-        </div>
+        </header>
 
         <div class="list-advertised">
             <ul>
@@ -33,20 +36,17 @@
         </div>
 
         <div>
-          <form action="#">
-            <label for="input">Email address</label>
-            <input id="input" type="email" placeholder="email@company.com" name="email-input">
+          <form action="#" method="get">
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="email@company.com" name="email-input">
             <button class="btn-submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
-        <div class="illustration-signup">
-            <img src="assets/images/illustration-sign-up-desktop.svg" alt="svg sign-up image"/>
-        </div>
-      </main>
-  </div>
+      </div>
+    </main>
 
   <!-- Thanks for subscibing panel -->
-  <div class="Success-state panel">
+  <div class="success-state panel">
     <ul>
       <li></li>
     </ul>
