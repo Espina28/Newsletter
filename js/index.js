@@ -1,10 +1,13 @@
-const email_input = document.getElementById('input');
-const subscribe_btn = document.querySelector('btn-submit');
+const email_input = document.querySelector('.input');
+const subscribe_btn = document.querySelector('.btn-submit');
 
-// subscribe_btn.addEventListener('click', ()=>{
-//     // const emailValue = email_input.value;
-//     // if(emailValue == null){
-//     //     alert("Please provide your email");
-//     // }
-//     alert("Please provide Email");
-// })
+subscribe_btn.addEventListener('click', (event) => {
+    
+    const emailValue = email_input.value;
+    
+    if (emailValue !== '') {
+        alert("Success");
+    } else {
+        alert("Email field cannot be empty.");
+    }
+});
