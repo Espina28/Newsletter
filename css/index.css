@@ -64,12 +64,13 @@ main {
     width: 700px;
     border-radius: 15px;
     margin-top: 40px;
-    padding: 20px;
+    padding: 20px 20px 20px 30px;
 }
 
 /* || title, header */
 .title > h1 {
     font-weight: var(--fw-700);
+    margin-top: 20px;
 }
 
 .left {
@@ -91,18 +92,17 @@ main {
     padding-inline: 1em;
 }
 
-
-.list-advertised {
-    font-size: 10px;
-}
-
 ul {
     list-style: none;
     padding: 0;
     font-size: 13px;
-    margin: 30px 0;
+    margin: 20px 0 20px 0;
 }
 
+
+.list-advertised {
+    font-size: 10px;
+}
 
 li {
     display: flex;
@@ -165,6 +165,10 @@ form > input {
     border: none;
     border: 1px solid #eee;
     margin-block: 0.5em 0;
+}
+
+label {
+    font-size: 14px;
 }
 
 
