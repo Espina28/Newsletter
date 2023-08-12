@@ -14,10 +14,8 @@ function checkEmail(emailVal) {
         emailInput.style.border = "1px solid red";
     }
 
-    // Change border color when focus is lost
-    if (!emailInput.value) {
-        emailInput.style.border = "1px solid black";
-    }
+    
+   
 }
 
 function validateEmail(email) {
