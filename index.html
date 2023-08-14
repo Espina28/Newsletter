@@ -23,19 +23,19 @@
         </header>
 
         <div class="list-advertised">
-          <ul>
+          <ul>  
           <li>
-              <input type="checkbox" class="round-checkbox" id="checkbox1">
+              <input type="checkbox" class="round-checkbox" id="checkbox1" checked>
               <label for="checkbox1" class="round-label"></label>
               Product discovery and building what matters
           </li>
           <li>
-              <input type="checkbox" class="round-checkbox" id="checkbox2">
+              <input type="checkbox" class="round-checkbox" id="checkbox2" checked>
               <label for="checkbox2" class="round-label"></label>
               Measuring to ensure updates are a success
           </li>
           <li>
-              <input type="checkbox" class="round-checkbox" id="checkbox3">
+              <input type="checkbox" class="round-checkbox" id="checkbox3" checked>
               <label for="checkbox3" class="round-label"></label>
               And much more!
           </li>
@@ -43,9 +43,12 @@
         </div>
         <div>
           <form action="#" method="get">
-            <label for="email">Email address</label>
-            <input id="email" type="email" placeholder="email@company.com" name="email-input">
-            <button class="btn-submit">Subscribe to monthly newsletter</button>
+            <div class="title-container">
+              <label for="email">Email address</label>
+              <H6 class="error-msg"></H6>
+            </div>   
+              <input id="email" type="email" placeholder="email@company.com" name="email-input">
+            <button class="btn submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
       </div>
@@ -57,12 +60,15 @@
   <!-- Thanks for subscibing panel -->
   <div class="success-state panel">
     <ul>
-      <li></li>
+      <li>
+        <input type="checkbox" class="round-checkbox" id="checkbox3" checked>
+        <label for="checkbox3" class="round-label"></label>
+      </li>
     </ul>
     <h2>Thanks for subscribing!</h2>
     <p>A confirmation email has been sent to 
       ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-    <button class="btn-dismiss">Dismiss message</button>
+    <button class="btn dismiss">Dismiss message</button>
   </div>
 
 </body>

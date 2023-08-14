@@ -4,9 +4,6 @@
 /* || 3. title */
 /* || email */
 /* || button */
-
-
-
 /* || Variables */
 :root {
     /* primary color */
@@ -46,6 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    gap: 20px;
 }
 
 
@@ -60,7 +58,6 @@ main {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 35px;
-    border: 2px solid blue;
     width: 700px;
     border-radius: 15px;
     margin-top: 40px;
@@ -70,6 +67,7 @@ main {
 /* || title, header */
 .title > h1 {
     font-weight: var(--fw-700);
+    font-size: 2.5em;
     margin-top: 20px;
 }
 
@@ -81,10 +79,6 @@ main {
     font-weight: 600;
     font-size: 12px;
     margin-top: 10px;
-}
-
-.left h1 {
-    font-size: 41px;
 }
 
 /* ||  */
@@ -140,7 +134,7 @@ li {
     top: 3px;
     width: 5px;
     height: 10px;
-    border: solid #fff;
+    border: solid #ffe8e6;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -163,17 +157,23 @@ form > label {
 form > input {
     padding-block: 0.7em;
     border: none;
-    border: 1px solid #eee;
+    border-radius: 0.3em;
+    border: 1px solid #b4b0b0;
     margin-block: 0.5em 0;
 }
 
 label {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 650;
 }
 
+.title-container {
+    display:flex;
+    gap: 95px;
+}
 
 /* ||button */
-.btn-submit {
+.btn {
     border: none;
     background-color: var(--clr-darkSlateGray);
     color: var(--clr-white);
@@ -185,13 +185,56 @@ label {
     cursor: pointer;
 }
 
+/*btn-effects when hovered*/
+.btn:hover {
+    background: linear-gradient(to left, #ff66008c, #c73e5a);
+}
 
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
 
+    main {
+        font-size: 0.3em;
+    }
+ }
 
+ /* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    main {
+        font-size: 0.4em;
+    }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    main {
+        font-size: 0.5em;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+    main {
+        font-size: 0.7em;
+    }
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+    main {
+        font-size: 1.0em;
+    }
+ }
 
 
 /* ||secret msg */
 .success-state {
     display: none;
+    min-height: 50vh;
+    width: 500px;
+    border-radius: 15px;
+    background-color: var(--clr-white);
+    font-weight: 400;
 }
 
