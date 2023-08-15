@@ -1,6 +1,9 @@
 const emailInput = document.querySelector("#email");
 const button = document.querySelector(".submit");
+const btn = document.querySelector('.dismiss');
 const error = document.querySelector(".error-msg");
+const signIn = document.querySelector('main');
+const success = document.querySelector('.success-state');
 
 
 function checkEmail(emailVal) {
@@ -8,19 +11,19 @@ function checkEmail(emailVal) {
         error.style.display = "none";
         emailInput.style.border = "1px solid green";
         emailInput.style.backgroundColor="white";
+        return true;
     } else {    
-        displayError();
-    }
-}
-
-function displayError(){
-    error.style.display = "inline-block";
+        error.style.display = "inline-block";
         error.innerText = "Valid email required";  
         error.style.color = "red";
         error.style.fontWeight = "bold";
         emailInput.style.border = "1px solid red";
         emailInput.style.backgroundColor ="#ffe8e6";
+        emailInput.style.color = "red";
+        return false;
+    }
 }
+
 
 function removeStyleError(){
     error.style.display = "";
@@ -40,9 +43,26 @@ emailInput.addEventListener('input',()=>{
     if(emailInput.value){
         checkEmail(emailInput.value);
     }
-    else removeStyleError();
+    else removeStyleError();  //it will remove the error effects when the input is null
 })
 
-button.addEventListener('click',()=>{
-    checkEmail(emailInput.value); 
+
+button.addEventListener('click', e =>{
+     //if email is valid close the subscribe panel and display the success panel
+    if(checkEmail(emailInput.value) == true){
+        signIn.style.display = "none";
+        success.style.display = "block";
+       
+        success.querySelector('p').innerText = `A confirmation email has been sent to 
+        ${(emailInput.value)} . Please open it and click the button inside to confirm your subscription.` ;
+
+        e.preventDefault();
+    }
+})
+
+//dismiss btn will go back to subscribe panel
+btn.addEventListener('click', e=>{
+    signIn.style.display = "grid";
+    success.style.display = "none";
+    e.preventDefault();
 })

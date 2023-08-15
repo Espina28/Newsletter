@@ -59,7 +59,7 @@ main {
     grid-template-columns: repeat(2,1fr);
     gap: 35px;
     width: 700px;
-    border-radius: 15px;
+    border-radius: 40px;
     margin-top: 40px;
     padding: 20px 20px 20px 30px;
 }
@@ -156,6 +156,7 @@ form > label {
 }
 form > input {
     padding-block: 0.7em;
+    padding-left: 0.7em;
     border: none;
     border-radius: 0.3em;
     border: 1px solid #b4b0b0;
@@ -187,13 +188,13 @@ label {
 
 /*btn-effects when hovered*/
 .btn:hover {
-    background: linear-gradient(to left, #ff66008c, #c73e5a);
+    background: linear-gradient(to left, #c063008c, #f23f63);
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
 
-    main {
+    .left {
         font-size: 0.3em;
     }
  }
@@ -230,11 +231,55 @@ label {
 
 /* ||secret msg */
 .success-state {
-    display: none;
-    min-height: 50vh;
-    width: 500px;
-    border-radius: 15px;
+    display: none  ;
+    height: 400px;
+    width: 400px;
+    border-radius: 40px;
     background-color: var(--clr-white);
     font-weight: 400;
+    position: absolute;     
+    top: 50px;
+    padding: 30px 50px 30px 50px;
+}
+
+.success-state .btn {
+    width: 100%;
+}
+
+.success-state label {
+    font-size: 100px;
+    font-weight: 650;
+}
+
+.success-state .round-label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--clr-tomato);
+    position: relative;
+}
+
+.success-state h2 {
+    font-size: 30px;
+}
+
+.success-state p {
+    font-size: 12px;
+    margin: 10px 0px 10px 0;
+}
+
+
+.success-state .round-checkbox:checked + .round-label::after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 7px;
+    width: 7px;
+    height: 28px;
+    border: solid #ffe8e6;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
