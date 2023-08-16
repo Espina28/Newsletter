@@ -194,7 +194,7 @@ label {
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
 
-    .left {
+    main {
         font-size: 0.3em;
     }
  }
